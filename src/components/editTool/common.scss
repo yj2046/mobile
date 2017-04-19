@@ -1,0 +1,80 @@
+$border:1px solid #999;
+$box-shadow: 0 0 10px #CCC, 0 0px 10px #ccc;
+$blue:#1A8CED;
+
+@mixin input($height:50px){
+  display: block;
+  height: $height;
+  line-height: $height;
+  border-radius: 2px;
+  border: $border;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 2px;
+  text-indent: 10px;
+}
+input::-webkit-input-placeholder{
+  color: #999;
+}
+input::-moz-placeholder{
+  color: #999;
+}
+input:-ms-input-placeholder{
+  color: #999;
+}
+input:focus{
+  border:1px solid $blue
+}
+.limit{
+  position: absolute;
+  top: 15px;
+  right: 7px;
+  font-size: 12px;
+  color: #999;
+  &.full{
+    color: #FD5554;
+  }
+}
+
+.place{
+  padding-top:10px;
+  position: relative;
+  >.title{
+    font-size: 18px;
+    color: #333;
+    height: 28px;
+    line-height: 28px;
+  }
+  >input{
+    display: inline-block;
+    width: 598px;
+    height: 28px;
+    line-height: 28px;
+    text-indent: 4px;
+    padding-right: 32px;
+    box-sizing: border-box;
+    border:$border;
+    border-radius: 2px;
+    &:focus{
+      border:1px solid $blue
+    }
+  }
+}
+.title-name{
+  position: relative;
+  >input{
+    @include input(46px);
+    font-size: 18px;
+    text-indent: 15px;
+    &:focus{
+      border:1px solid $blue
+    }
+  }
+  .star{
+    position: absolute;
+    top: 13px;
+    left: 6px;
+    color: #FD5554;
+    font-size: 18px;
+  }
+}

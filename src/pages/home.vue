@@ -1,13 +1,21 @@
 <template lang="html">
   <div class="container">
-    <home-header></home-header>   <!--  展示引入的header组件 -->
-    <div class="content">
-      <ul class="cont-ul">
-        <!-- list组件展示区，并用v-for来将数据遍历，:xx="xxx" 是用来给子组件传递数据的 -->
-        <list v-for="item in items" :price="item.price" :title="item.title" :img="item.img"></list>
-      </ul>
-    </div>
-    <common-footer></common-footer>  <!--  展示引入的footer组件 -->
+    <!--<home-header>-->
+
+    <!--</home-header>   &lt;!&ndash;  展示引入的header组件 &ndash;&gt;-->
+    <router-link to="/demo" class="slide-component">
+      <h2>轮播组件</h2>
+    </router-link>
+    <router-link to="/editTool" class="edit-component">
+      <h2>编辑工具</h2>
+    </router-link>
+    <!--<div class="content">-->
+      <!--<ul class="cont-ul">-->
+        <!--&lt;!&ndash; list组件展示区，并用v-for来将数据遍历，:xx="xxx" 是用来给子组件传递数据的 &ndash;&gt;-->
+        <!--<list v-for="item in items" :price="item.price" :title="item.title" :img="item.img"></list>-->
+      <!--</ul>-->
+    <!--</div>-->
+    <!--<common-footer></common-footer>  &lt;!&ndash;  展示引入的footer组件 &ndash;&gt;-->
   </div>
 </template>
 <script>
