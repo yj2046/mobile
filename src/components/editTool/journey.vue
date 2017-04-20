@@ -105,6 +105,7 @@
         document.getElementById('shadow').style.display = 'block'
         document.getElementsByTagName('body')[0].style.position = 'fixed'
       }
+
     }
   }
 </script>
@@ -295,7 +296,6 @@
       margin:28px 38px 6px;
     }
     .text{
-
       font-size: 20px;
     }
     .img-number{
